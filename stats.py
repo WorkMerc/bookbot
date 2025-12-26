@@ -16,3 +16,17 @@ def char_count(text):
         else:
             characters[character] += 1
     return characters
+
+def sorting(dictionary):
+    return dictionary["num"]
+
+def sorted_chars(num_chars):
+    dictionary_list = []
+    for k,v in num_chars.items():
+        new_kv_pair = {"char" : "", "num" : ""}
+        new_kv_pair["char"] = k
+        new_kv_pair["num"] = v
+        dictionary_list.append(new_kv_pair)
+    dictionary_list.sort(reverse=True, key=sorting)
+    return dictionary_list
+
